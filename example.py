@@ -7,9 +7,6 @@ def main():
     zubr = ZubrSDK(
         api_key='YOUR-API-KEY-HERE',
         api_secret='YOUR-API-SECRET-HERE',
-        default_callback=lambda message: (
-            print('Unknown message: ', message)
-        )
     )
 
     def on_instruments(message):
@@ -27,6 +24,7 @@ def main():
             print(data['payload'])
         elif data['type'] == 'trade':
             print('New trade!')
+            print(data['payload'])
         else:
             print(f'unknown type of trade: {data["type"]}')
 

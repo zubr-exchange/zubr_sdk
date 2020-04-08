@@ -294,9 +294,7 @@ class ZubrSDK:
     ):
         return self._rpc(
             method='cancelOrder',
-            params={
-                'orderId': order_id,
-            },
+            params=order_id,
             callback=callback
         )
 
