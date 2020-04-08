@@ -47,8 +47,8 @@ def on_order_placed(message):
 # Fetch orderbook
 @zubr_sdk.subscribe_orderbook
 def on_orderbook(message):
-    # print('orderbook:')
-    # pprint(message)
+    print('orderbook:')
+    pprint(message)
 
     if context['order_placed']:
         return
