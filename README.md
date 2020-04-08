@@ -8,9 +8,6 @@ from zubr import ZubrSDK, OrderType, TimeInForce
 zubr_sdk = ZubrSDK(
     api_key='YOUR-API-KEY-HERE',
     api_secret='YOUR-API-SECRET-HERE',
-    default_callback=lambda message: (
-        print('New message: ', message)
-    )
 )
 context = {
     'order_placed': False,
